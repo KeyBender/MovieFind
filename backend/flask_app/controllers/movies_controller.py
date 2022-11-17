@@ -1,6 +1,6 @@
 from flask_app import app
 from flask import jsonify, request
-from models.movies_model import Movies
+from flask_app.models.movies_model import Movies
 
 @app.route('/api/movies/like', methods=['POST'])
 def like():
