@@ -15,7 +15,6 @@ function App(props) {
               .catch(err=> console.log(err))
   }
   
-
   useEffect(()=>{
     setFilms(backendFilmPopulate())
   },[])
