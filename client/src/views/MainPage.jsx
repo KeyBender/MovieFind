@@ -1,41 +1,33 @@
 import React from "react";
 import { useState } from "react";
 import Nav from "../components/Nav";
-import MovieCard from "../components/MovieCard";
+import { Link, useNavigate } from "react-router-dom";
 
-export default function MainPage(props){
-    const {films} = props
-    const [searchKeyword, setSearchKeyWord] = useState("")
+export default function MainPage(props) {
+  const navigate = useNavigate();
+  const [searchKeyword, setSearchKeyWord] = useState("");
 
-    const handleSubmit = (e)=>{
-        e.preventDefault()
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/search/${searchKeyword}`);
+  };
+  return (
+    <div>
+      <Nav />
 
-    }
-
-    const movies = films.titles.filter(film=> film.tmdb_type === "movie")
-    const tvShows = films.titles.filter(film=> film.tmdb_type === "tv")
-
-    return(
-        <div>
-            <Nav/>
-
-            <div>
-                <h1>MovieFind</h1>
-                <form onSubmit={handleSubmit}>
-                    <input type="text" placeholder="Search for any movie or tv show" onChange={e=> setSearchKeyWord(e.target.value)} />
-                    <button>Submit</button>
-                </form>
-            </div>
-
-            <div>
-                <h1>Tv Shows</h1>
-                {tvShows.forEach((tvShow)=> <MovieCard film = {tvShow}/>)}
-            </div>
-
-            <div>
-                <h1>Movies</h1>
-                {movies.forEach((movie)=> <MovieCard film = {movie}/>)}
-            </div>
-        </div>
-    )
+      <div className="mt-10">
+        <h1 className="text-center font-extrabold text-7xl first-letter:bg-clip-text first-letter:text-transparent first-letter:bg-gradient-to-tr first-letter:from-sky-500 first-letter:to-orange-700 ">
+          Movie<span className="bg-clip-text text-transparent bg-gradient-to-tr from-sky-500 to-orange-700 ">F</span>ind
+        </h1>
+        <form onSubmit={handleSubmit} className="flex justify-center mt-16">
+          <input
+            type="text"
+            placeholder="Search for any movie or tv show"
+            onChange={(e) => setSearchKeyWord(e.target.value)}
+            className="rounded bg-gray-300 focus:bg-white transition ease-out p-2 mr-2 w-72 text-center"
+          />
+        </form>
+      </div>
+    </div>
+  );
 }
