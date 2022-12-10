@@ -8,19 +8,19 @@ Written in Python (Flask) and JavaScript (React)
 
 ## How To Run
 
-1. install [Python 3.10.5](https://www.python.org/downloads/release/python-3105) or higher
-2. install [pip](https://pypi.org/project/pip/)
-3. install [node](https://nodejs.org/en/download/)
-4. go to [watchmode](https://api.watchmode.com/) and create an account to get your own api key
-5. create a .env file in the backend directory. (Moviefind/backend/.env)
-6. copy and paste your api key in the .env file (YOUR_API_KEY={the api key associated with your account})
-7. install pipenv
-```
-pip install pipenv
-```
-8. clone the project
+1. clone the project
 ```
 git clone https://github.com/KeyBender/MovieFind.git
+```
+2. install [Python 3.10.5](https://www.python.org/downloads/release/python-3105) or higher
+3. install [pip](https://pypi.org/project/pip/)
+4. install [node](https://nodejs.org/en/download/)
+5. go to [watchmode](https://api.watchmode.com/) and create an account to get your own api key
+6. create a .env file in the backend directory. (Moviefind/backend/.env)
+7. copy and paste your api key in the .env file (YOUR_API_KEY={the api key associated with your account})
+8. install pipenv
+```
+pip install pipenv
 ```
 9. go to the backend folder
 ```
