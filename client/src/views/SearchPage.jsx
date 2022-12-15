@@ -28,7 +28,7 @@ const SearchPage = (props) => {
       <div className="p-6 flex-col justify-center text-center ">
         <h1 className="mb-4">Search Results for "{keyword}"</h1>
         {!loaded && <LoadingSkelly />}
-        <div className="inline-grid grid-cols-2 lg:grid-cols-4 sm:grid-col-2 justify-center gap-3">
+        <div className="inline-grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 justify-center gap-3">
           {loaded && films.map((film) => <MovieCard movie={film} />)}
         </div>
       </div>

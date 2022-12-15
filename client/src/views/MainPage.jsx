@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Nav from "../components/Nav";
 import { Link, useNavigate } from "react-router-dom";
+import wave from '../layered-waves-haikei.svg'
 
 export default function MainPage(props) {
   const navigate = useNavigate();
@@ -12,11 +13,13 @@ export default function MainPage(props) {
     navigate(`/search/${searchKeyword}`);
   };
   return (
-    <div>
+    <div className="h-96" style={{
+      backgroundImage : `url(${wave})`
+    }}>
       <Nav />
 
       <div className="mt-10">
-        <h1 className="text-center font-extrabold text-7xl first-letter:bg-clip-text first-letter:text-transparent first-letter:bg-gradient-to-tr first-letter:from-sky-500 first-letter:to-orange-700 ">
+        <h1 className="text-gray-900 text-center font-extrabold text-7xl first-letter:bg-clip-text first-letter:text-transparent first-letter:bg-gradient-to-tr first-letter:from-sky-500 first-letter:to-orange-700 ">
           Movie<span className="bg-clip-text text-transparent bg-gradient-to-tr from-sky-500 to-orange-700 ">F</span>ind
         </h1>
         <form onSubmit={handleSubmit} className="flex justify-center mt-16">

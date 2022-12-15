@@ -26,7 +26,7 @@ export default function ViewPage(props) {
         <div className="mx-auto">
           <img src={`${film.poster}`} alt="" className="mx-auto"/>
           <h1 className="text-center font-extrabold text-3xl my-5">{film.title}</h1>
-          <p className="text-center max-w-2xl mx-auto my-3">{film.plot_overview}</p>
+          <p className="text-center max-w-2xl mx-auto my-3 p-5">{film.plot_overview}</p>
           <h3 className="text-center underline-offset-4 underline mb-4">Streaming Services</h3>
           <div className="flex gap-5 p-6 justify-center h-96 bg-white/50" style={{
             backgroundImage : `url(${wave})`,
