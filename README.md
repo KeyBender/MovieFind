@@ -17,7 +17,7 @@ git clone https://github.com/KeyBender/MovieFind.git
 4. install [node](https://nodejs.org/en/download/)
 5. go to [watchmode](https://api.watchmode.com/) and create an account to get your own api key
 6. create a .env file in the backend directory. (Moviefind/backend/.env)
-7. copy and paste your api key in the .env file (YOUR_API_KEY={the api key associated with your account})
+7. copy and paste your api key in the .env file (YOUR_API_KEY="the api key associated with your account")
 8. install pipenv
 ```
 pip install pipenv
