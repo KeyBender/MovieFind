@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import Nav from "../components/Nav";
 import { Link, useNavigate } from "react-router-dom";
-import wave from '../layered-waves-haikei.svg'
 
 export default function MainPage(props) {
   const navigate = useNavigate();
@@ -13,9 +12,7 @@ export default function MainPage(props) {
     navigate(`/search/${searchKeyword}`);
   };
   return (
-    <div className="h-96" style={{
-      backgroundImage : `url(${wave})`
-    }}>
+    <div className="h-96 bg-wave-image bg-no-repeat bg-cover">
       <Nav />
 
       <div className="mt-10">
